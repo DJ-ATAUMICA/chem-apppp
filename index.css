@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-r from-teal-500 to-indigo-500 px-5 py-3.5 text-base font-semibold text-white shadow-card transition-all duration-200 hover:from-teal-600 hover:to-indigo-600 hover:shadow-cardHover focus:outline-none focus:ring-4 focus:ring-teal-300/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .btn-secondary {
+    @apply inline-flex w-full items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3.5 text-base font-semibold text-slate-700 transition-all duration-200 hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+  .field-input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3.5 text-base text-slate-900 placeholder-slate-400 transition-colors focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-300/30;
+  }
+  .card-surface {
+    @apply rounded-3xl border border-slate-100 bg-white shadow-card;
+  }
+}
