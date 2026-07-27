@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./screenshots/01-login.png" alt="ChemMate login screen" width="240" />
+  <img src="screenshots/01-login.png" alt="ChemMate login screen" width="240" />
 </p>
 
 <h1 align="center">ChemMate</h1>
