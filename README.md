@@ -28,11 +28,11 @@ ChemMate is a mobile-first React + Firebase study app for A-level Chemistry stud
 
 | Home dashboard | Custom AI Quiz — difficulty | Quiz in progress |
 |---|---|---|
-| ![Home dashboard](./screenshots/02-home-dashboard.png) | ![Choose difficulty](./screenshots/03-quiz-difficulty.png) | ![Quiz question](./screenshots/04-quiz-question.png) |
+| ![Home dashboard](screenshots/02-home-dashboard.png) | ![Choose difficulty](screenshots/03-quiz-difficulty.png) | ![Quiz question](screenshots/04-quiz-question.png) |
 
 | My Notes — text | My Notes — drawing canvas |
 |---|---|
-| ![Text notes](./screenshots/05-notes-text.png) | ![Drawing canvas](./screenshots/06-notes-drawing.png) |
+| ![Text notes](screenshots/05-notes-text.png) | ![Drawing canvas](screenshots/06-notes-drawing.png) |
 
 ## Tech stack
 
