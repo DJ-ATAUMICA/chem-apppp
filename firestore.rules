@@ -1,0 +1,34 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- Topics (A2 / AS chemistry content) ----------
+    // Readable by any signed-in user; writes restricted to admins (add an
+    // `isAdmin` custom claim or a users/{uid}.isAdmin flag when ready).
+    match /topics/{topicId} {
+      allow read: if request.auth != null;
+
+      match /subtopics/{subtopicId} {
+        allow read: if request.auth != null;
+        // Fields: title, bodyText, keyDefinitions (array), diagramImageUrls (array)
+        allow write: if false; // locked until admin write path exists
+      }
+    }
+
+    // ---------- Per-user notes & sketches ----------
+    // Each user can only read and write their own data.
+    match /userNotes/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      match /notes/{noteId} {
+        // Fields: title, textContent, updatedAt
+        allow read, create, update, delete: if request.auth != null && request.auth.uid == uid;
+      }
+
+      match /sketches/{sketchId} {
+        // Fields: imageDataUrl, updatedAt
+        allow read, create, update, delete: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+  }
+}
