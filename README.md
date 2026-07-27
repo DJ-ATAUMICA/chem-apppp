@@ -166,4 +166,4 @@ firestore.rules                 # security rules (paste into the Firebase consol
 
 ## License
 
-Personal/portfolio project — study purposes only. Add a license here if you plan to open-source it.
+Personal/portfolio project — study purposes only. 
